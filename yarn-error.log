@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/Cellar/node@8/8.15.0/bin/node /usr/local/Cellar/yarn/1.13.0/libexec/bin/yarn.js start
+  /usr/local/Cellar/node@8/8.15.0/bin/node /usr/local/Cellar/yarn/1.13.0/libexec/bin/yarn.js publish
 
 PATH: 
   /usr/local/opt/node@8/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Wireshark.app/Contents/MacOS:/usr/local/opt/node@8/bin:~/Cloud/workspace/scripts/bash:/usr/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:~/Cloud/workspace/scripts/bash::/usr/local/bin:/usr/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Wireshark.app/Contents/MacOS:/usr/local/opt/node@8/bin:~/Cloud/workspace/scripts/bash:/usr/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:~/Cloud/workspace/scripts/bash::/usr/local/bin:/usr/local/sbin
@@ -14,25 +14,29 @@ Platform:
   darwin x64
 
 Trace: 
-  SyntaxError: /Users/toninichev/Cloud/workspace/electron/electronUpdater/package.json: Unexpected token } in JSON at position 235
-      at JSON.parse (<anonymous>)
-      at /usr/local/Cellar/yarn/1.13.0/libexec/lib/cli.js:1625:59
-      at Generator.next (<anonymous>)
-      at step (/usr/local/Cellar/yarn/1.13.0/libexec/lib/cli.js:304:30)
-      at /usr/local/Cellar/yarn/1.13.0/libexec/lib/cli.js:315:13
-      at <anonymous>
+  Error: canceled
+      at Interface.<anonymous> (/usr/local/Cellar/yarn/1.13.0/libexec/lib/cli.js:125657:13)
+      at emitNone (events.js:106:13)
+      at Interface.emit (events.js:208:7)
+      at Interface._ttyWrite (readline.js:774:16)
+      at ReadStream.onkeypress (readline.js:158:10)
+      at emitTwo (events.js:126:13)
+      at ReadStream.emit (events.js:214:7)
+      at emitKeys (internal/readline.js:420:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (readline.js:1010:36)
 
 npm manifest: 
   {
     "name": "electronUpdater",
-    "version": "1.0.0",
-    "main": "index.js",
+    "version": "1.0.1",
+    "main": "main.js",
     "author": "Toni Nichev <toni.nichev@nbcuni.com>",
     "license": "MIT",
     "scripts": {
       "publish": "build --mac -p always",
-      "start": "electron .",    
-    },  
+      "start": "electron ."
+    },
     "devDependencies": {
       "electron": "^4.1.0",
       "electron-builder": "^20.39.0"
@@ -49,7 +53,7 @@ npm manifest:
           "dmg"
         ]
       }
-    }  
+    }
   }
 
 yarn manifest: 
