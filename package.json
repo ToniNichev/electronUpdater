@@ -1,0 +1,28 @@
+{
+  "name": "electronUpdater",
+  "version": "1.0.0",
+  "main": "main.js",
+  "author": "Toni Nichev <toni.nichev@nbcuni.com>",
+  "license": "MIT",
+  "scripts": {
+    "publish": "build --mac -p always",
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^4.1.0",
+    "electron-builder": "^20.39.0"
+  },
+  "dependencies": {
+    "electron-updater": "^4.0.6"
+  },
+  "build": {
+    "appId": "com.github.iffy.electronupdaterexample",
+    "mac": {
+      "category": "your.app.category.type",
+      "target": [
+        "zip",
+        "dmg"
+      ]
+    }
+  }
+}
